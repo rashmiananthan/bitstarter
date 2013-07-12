@@ -19,7 +19,7 @@ if(require.main == module) {
     exports.checkHtmlFile = checkHtmlFile;
 }
 
-var clone = fiunction(fn){
+var clone = function(fn){
     return fn.bind({});
 };
 
