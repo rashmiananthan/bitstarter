@@ -4,7 +4,13 @@ var fs = require('fs');
 
 var app = express.createServer(express.logger());
 
-var input = fs.readFileSync('/home/ubuntu/bitstarter/index.html');
+var input = String(fs.readFileSync('/home/ubuntu/bitstarter/index.html','utf8',function(err,data){
+  if(err){
+     return console.log(err);
+  }
+  console.log(data);
+}));
+
 
 var buf = new Buffer(input);
 
